@@ -1,4 +1,4 @@
-
+import java.lang.Math;
 public class ArrayAbsoluteValue {
     /**
      * Given an array of integers 'nums', produce an array of integers composed of the absolute values of all the
@@ -9,6 +9,12 @@ public class ArrayAbsoluteValue {
      * @return the absolute value array of nums.
      */
     public int[] getArrayAbs(int[] nums){
-        return null;
+        int[] returnArray = nums.clone();
+        int i = 0;
+        while(i < returnArray.length){
+            returnArray[i] = Math.abs(returnArray[i]);
+            i++;
+        }
+        return returnArray;
     }
 }
